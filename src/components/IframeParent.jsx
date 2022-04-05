@@ -6,8 +6,8 @@ export const IframeParent = () => {
   const sendMessage = () => {
     if (!iFrameRef.current) return;
     iFrameRef.current.contentWindow.postMessage(
-      "Hello son!",
-      "http://localhost:3000"
+      "85158a58-57aa-4985-bee7-d9d8b15e175c",
+      "http://localhost:3001"
     );
   };
 
@@ -34,9 +34,9 @@ export const IframeParent = () => {
 
       <iframe
         ref={iFrameRef}
-        src="/iframe-child/"
-        width="600"
-        height="300"
+        src="http://localhost:3001/"
+        width="400"
+        height="700"
         title="Child iframe"
       ></iframe>
 

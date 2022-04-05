@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+
 export const IframeChild = () => {
   const [recievedMessage, setRecievedMessage] = useState("");
 
   const sendMessage = () => {
-    window.parent.postMessage("Hi dad!", "http://localhost:3000");
+    window.parent.postMessage("Hi parent!", "http://localhost:3000");
   };
 
   useEffect(() => {
